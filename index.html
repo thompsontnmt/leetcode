@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Funcitons</title>
+    <script type="text/javascript">
+        // var string = "Return this in alphabetical order"; -->
+        const string = prompt("please enter a string");
+
+        var reOrder = function(string, result = '') {
+            var stringArray = string.toLowerCase().split(' ');
+            var stringArrayArranged = stringArray.sort().join(' ');
+            result = stringArrayArranged[0].toUpperCase() + stringArrayArranged.substring(1);
+            console.log(string);
+            console.log(stringArray);
+            console.log(stringArrayArranged);
+            console.log(result);
+        }
+        reOrder(string);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
