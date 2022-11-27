@@ -26,7 +26,7 @@ the sequence
 */
 // O(n) time, O(1) space
 var fib = function(n, arr = [0, 1]){
-    for (i = 2; i < n; i++) {
+    for (let i = 2; i < n; i++) {
         arr.push(arr[i-1] + arr[i-2]);
     }
     return arr[n];
