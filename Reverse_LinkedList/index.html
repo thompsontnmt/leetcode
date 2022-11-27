@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse A Linked List</title>
+    <script type= "text/javascript">
+        function ListNode(val, next) {
+            this.val = (val===undefined ? 0 : val)
+            this.next = (next===undefined ? null : next)
+        }
+        var head = [1, 2, 3, 4, 5];
+        var reverseList = function(head) {
+            let temp, newHead = null;
+            while (head !== null) {
+                temp = head;
+                head = head.next;
+                temp.next = newHead;
+                newHead = temp;
+                console.log(newHead);
+            }
+
+            return newHead;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
