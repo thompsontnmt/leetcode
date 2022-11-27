@@ -17,7 +17,8 @@ var reOrder = function(text) {
         result += words[i++].text + ' ';
     }
     result += words[i].text;
-    return result[0].toUpperCase() + result.substring(1);
     console.log(result);
+    return result[0].toUpperCase() + result.substring(1);
+    
 }
 reOrder(text);

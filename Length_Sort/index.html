@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort By Length</title>
+    <script type="text/javascript">
+    var text = prompt("enter some text");
+        var reOrder = function(text) {
+            const words = text.toLowerCase().split(' ').map((val, i) => {
+                return {
+                    text: val,
+                    length: val.length,
+                    index: i
+                }
+            });
+            console.log(words);
+            words.sort((a, b) => {
+                if (a.length === b.length) {
+                    return a.index - b.index;
+                }
+                return a.length - b.length;
+            });
+            var i = 0;
+            var result = '';
+            while (i < words.length - 1) {
+                result += words[i++].text + ' ';
+            }
+            result += words[i].text;
+            return result[0].toUpperCase() + result.substring(1);
+            console.log(text);
+        }
+        reOrder(text);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
