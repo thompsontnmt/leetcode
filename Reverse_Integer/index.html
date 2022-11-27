@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Integer</title>
+    <script type="text/javascript">
+        var x = prompt("Enter an integer value");
+        var reverse = function (x, result = 0) {
+            while (x !== 0) {
+                console.log("modified integer = ", x);
+                let digit = (x % 10);
+                //conditional statement to check if x is out of bounds
+                if (isOutOfBounds(digit, result)) return 0;
+                x = Math.trunc(x / 10);
+                result = (result * 10) + digit;
+                console.log("new reversal = ", result);
+                console.log(x);
+            }
+            return result;
+        };
+
+        // conditional statements if there are constraints on how many bits
+        // the integer must be. ex: 32 bit
+        const isOutOfBounds = (digit, result) => {
+            const [ max, min ] = [ ((2 ** 31) - 1), (-(2 ** 31)) ];
+            const [ maxProduct, maxRemainder ] = [ (max / 10), (max % 10) ];
+            const [ minProduct, minRemainder ] = [ (min / 10), (min % 10) ];
+            const isEqual = result === maxProduct;
+
+            const isMaxOut = (maxProduct <= result) || (isEqual && maxRemainder <= digit);
+            const isMinOut = (minProduct >= result) || (isEqual && minRemainder >= digit);
+
+            return isMinOut || isMaxOut;
+        }
+        isOutOfBounds(x);
+        reverse(x);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
