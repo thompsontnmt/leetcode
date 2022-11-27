@@ -21,6 +21,7 @@
                     return a.index - b.index;
                 }
                 return a.length - b.length;
+                console.log(words.sort);
             });
             var i = 0;
             var result = '';
@@ -28,8 +29,8 @@
                 result += words[i++].text + ' ';
             }
             result += words[i].text;
+            console.log(result);
             return result[0].toUpperCase() + result.substring(1);
-            console.log(text);
         }
         reOrder(text);
     </script>
