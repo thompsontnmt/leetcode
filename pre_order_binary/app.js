@@ -1,0 +1,3 @@
+var preOrderTraversal = function(root) {
+    
+}
