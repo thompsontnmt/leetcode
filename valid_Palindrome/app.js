@@ -13,14 +13,13 @@ var isPalindrome = (s) => {
         if (!/[a-zA-Z0-9]/.test(leftChar)) {
             left++;
         } else if (!/[a-zA-Z0-9]/.test(rightChar)) {
-            R--;
+            right--;
         } else {
             if (leftChar.toLowerCase() != rightChar.toLowerCase()) {
                 return false;
             }
             left++;
             right--;
-            console.log(s);
         }
     }
     return true;
