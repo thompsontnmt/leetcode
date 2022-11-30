@@ -1,3 +1,4 @@
+var prices = [150.00, 275.00];
 var maxProfit = (prices) => {
     if (prices.length < 2) return 0;
 
@@ -13,6 +14,8 @@ var maxProfit = (prices) => {
 
         min_Profit = Math.min(min_Profit, current_price);
     }
+    console.log(max_Profit);
     if (max_Profit > 0) return max_Profit;
     return 0;
 }
+maxProfit(prices);
