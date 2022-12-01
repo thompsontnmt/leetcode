@@ -1,3 +1,13 @@
-var validParens = function(string) {
-    for (i in (string.length) / 2);
-}
+var validParens = function(s) {
+    let preS = '';
+    while (s !== preS) {
+        preS = s;
+        s = s.split('()').join('');
+        s = s.split('[]').join('');
+        s = s.split('{}').join('');
+    }
+    if (!s) return true;
+    return false;
+};
+
+validParens(s);
